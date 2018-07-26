@@ -56,5 +56,9 @@ def compare(filename1, filename2):
 #     sys.exit(-1)
 
 # compare('input/01.jpg', 'sift_keypoints.jpg')
-compare('input/01.jpg', '01.jpg')
+# compare('input/01.jpg', '01.jpg')
+compare('affected/01a66316-0e98-4d3b-a56f-d78752cd043f_FREC_Scab_3003.JPG',
+        'affected/0c620ec5-11cf-4120-94ab-1311e99df147_FREC_Scab_3131.JPG')
+# image1 = cv2.imread('affected/a97c2088-9bf7-4840-8a41-813aadae4aa6_JR_FrgE.S_2793.JPG')
+# image2 = cv2.imread('affected/0bc40cc3-6a85-480e-a22f-967a866a56a1_JR_FrgE.S_2784.JPG')
 # compare('output/image_01.png', 'output/image_11.png')

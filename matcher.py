@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-image1 = cv2.imread('input/01.jpg')
-image2 = cv2.imread('input/02.jpg')
+image1 = cv2.imread('affected/a97c2088-9bf7-4840-8a41-813aadae4aa6_JR_FrgE.S_2793.JPG')
+image2 = cv2.imread('affected/0bc40cc3-6a85-480e-a22f-967a866a56a1_JR_FrgE.S_2784.JPG')
 
 
 def show_rgb_img(img):
@@ -30,7 +30,7 @@ def show_sift_features(gray_img, color_img, kp):
     return plt.imshow(cv2.drawKeypoints(gray_img, kp, color_img.copy()))
 
 
-image1 = to_gray(image1)
+image1_gray = to_gray(image1)
 image2_gray = to_gray(image2)
 
 plt.imshow(image1, cmap='gray')
@@ -39,7 +39,7 @@ image1_kp, image1_desc = gen_sift_features(image1)
 image2_kp, image2_desc = gen_sift_features(image2)
 
 print('Here are what our SIFT features look like for the front-view octopus image:')
-show_sift_features(image1, image1, image2)
+show_sift_features(image1_gray, image1, image1_kp)
 
 bf = cv2.BFMatcher(cv2.NORM_L2, crossCheck=True)
 
